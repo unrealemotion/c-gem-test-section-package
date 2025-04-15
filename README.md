@@ -81,12 +81,6 @@ This section (`c-gem-test.liquid`) utilizes Shopify's block-based architecture. 
 *   Designed for Shopify Online Store 2.0 themes.
 *   Requires themes that utilize JSON templates for section inclusion via the Theme Editor.
 
-## Customization Notes
-
-*   The CSS is based on the provided static `styles.css`. Depending on the specific target theme, further CSS adjustments (especially regarding spacing, typography inheritance, or button styling) might be necessary for perfect integration.
-*   Consider using theme-defined CSS variables (e.g., `{{ settings.color_primary }}`) instead of hardcoded colors in the future for better theme consistency if adapting this for a specific theme product.
-*   The responsive breakpoints in the CSS can be adjusted to better match the target theme's specific breakpoints.
-
 ---
 
 *This README provides guidance for installing and using the "C GEM Test Section". Please refer to the Shopify documentation for more advanced theme development concepts.*
