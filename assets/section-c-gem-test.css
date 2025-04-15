@@ -1,0 +1,745 @@
+/* --- General Styles for c-gem-test Section --- */
+.c-gem-test-section .page-width {
+    max-width: 1170px; /* Define max-width for centered content */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem; /* Adjust padding as needed */
+    padding-right: 1.5rem;
+  }
+  
+  .c-gem-test-section .block-padding {
+    padding-top: 50px; /* Vertical spacing between blocks */
+    padding-bottom: 50px;
+  }
+  /* Ensure section itself doesn't add extra horizontal padding */
+  .c-gem-test-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  @media (min-width: 750px) {
+    .c-gem-test-section .block-padding {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+  }
+  
+  /* --- Block Type: features_with_image --- */
+  .c-gem-test__features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
+    width: 100%;
+  }
+  
+  .c-gem-test__features-main-heading {
+    max-width: 536px;
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2; /* 120% */
+    text-align: center;
+    letter-spacing: 0.25px;
+    color: #161723;
+    margin: 0 auto; /* Center heading */
+  }
+  
+  .c-gem-test__features-content-wrapper {
+    display: flex;
+    flex-direction: column; /* Default for mobile */
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+  }
+  
+  @media (min-width: 990px) { /* Adjust breakpoint as needed */
+    .c-gem-test__features-content-wrapper {
+      flex-direction: row; /* Row layout on larger screens */
+      align-items: center; /* Align items vertically */
+      justify-content: center; /* Center items horizontally */
+    }
+  }
+  
+  .c-gem-test__features-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items left in column */
+    gap: 40px; /* Reduced gap for mobile */
+    width: 100%;
+    max-width: 370px; /* Max width for feature columns */
+  }
+  
+  @media (min-width: 750px) {
+    .c-gem-test__features-column {
+      gap: 80px; /* Restore original gap */
+    }
+  }
+  
+  
+  .c-gem-test__feature-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+    width: 100%; /* Take full width of column */
+  }
+  /* Mobile stacking for feature item */
+  @media (max-width: 599px) {
+    .c-gem-test__feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+  }
+  
+  .c-gem-test__feature-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden; /* Ensure image stays within bounds */
+  }
+  
+  .c-gem-test__feature-icon-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Or contain */
+  }
+  
+  .c-gem-test__feature-icon-placeholder {
+     width: 60px;
+     height: 60px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #EEEEEE;
+     border-radius: 50%;
+  }
+  .c-gem-test__feature-icon-placeholder svg {
+      width: 30px;
+      height: 30px;
+  }
+  
+  
+  .c-gem-test__feature-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    flex-grow: 1;
+  }
+  @media (max-width: 599px) {
+    .c-gem-test__feature-text-content {
+      align-items: center; /* Center text in mobile */
+    }
+  }
+  
+  
+  .c-gem-test__feature-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.5px;
+    color: #161723;
+    margin: 0;
+  }
+  
+  .c-gem-test__feature-description {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.5px;
+    color: #424153;
+    margin: 0;
+    width: 100%; /* Ensure takes width */
+  }
+  
+  .c-gem-test__features-center-image-wrapper {
+    width: 100%; /* Full width on mobile */
+    max-width: 370px; /* Max width matches columns */
+    height: auto; /* Auto height */
+    aspect-ratio: 1 / 1; /* Maintain square shape */
+    background: #FFFFFF;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide overflow */
+  }
+  @media (min-width: 990px) {
+      .c-gem-test__features-center-image-wrapper {
+          width: 370px; /* Fixed width on desktop */
+          height: 370px; /* Fixed height on desktop */
+      }
+  }
+  
+  .c-gem-test__features-center-image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    object-fit: cover; /* Cover the area */
+  }
+  .c-gem-test__features-center-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+  }
+  .c-gem-test__features-center-image-placeholder svg {
+      width: 50%;
+      height: 50%;
+  }
+  
+  
+  .c-gem-test__features-cta-guarantee-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 16px;
+    width: 100%;
+    max-width: 462px; /* Limit width of this container */
+    margin-left: auto; /* Center container */
+    margin-right: auto;
+  }
+  
+  /* Common Button Style - Adapting Dawn's classes is often better, but using specific ones here */
+  .c-gem-test__button {
+    display: inline-flex; /* Use inline-flex for content alignment */
+    justify-content: center;
+    align-items: center;
+    padding: 12px 30px; /* Adjusted padding */
+    gap: 10px;
+    height: 48px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from links styled as buttons */
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.5px;
+    text-align: center;
+    width: 100%; /* Default to full width of container */
+  }
+  
+  .c-gem-test__button--primary {
+    background-color: #EE6F4B;
+    color: #FFFFFF;
+  }
+  .c-gem-test__button--primary:hover {
+    background-color: #d95f3a; /* Simple hover effect */
+  }
+  
+  .c-gem-test__button--secondary {
+    background-color: #EE6F4B; /* Same as primary in initial design */
+    color: #FFFFFF;
+    /* You might want different styles for secondary */
+  }
+  .c-gem-test__button--secondary:hover {
+     background-color: #d95f3a;
+  }
+  
+  /* Width constraint for specific button */
+  .c-gem-test__features-cta-button {
+     max-width: 462px; /* Specific max-width for this button */
+  }
+  
+  .c-gem-test__features-guarantee-payments {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 16px; /* Gap when stacked */
+    width: 100%; /* Full width of container */
+    min-height: 24px; /* Minimum height */
+  }
+  @media (min-width: 600px) { /* Row layout on larger screens */
+      .c-gem-test__features-guarantee-payments {
+          flex-direction: row;
+          gap: 24px;
+      }
+  }
+  
+  
+  .c-gem-test__features-guarantee {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 20px;
+  }
+  
+  .c-gem-test__features-guarantee-icon img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+  }
+  
+  .c-gem-test__features-guarantee-icon .placeholder-svg {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .c-gem-test__features-guarantee-icon .placeholder-svg svg{
+    width: 16px;
+    height: 16px;
+  }
+  
+  .c-gem-test__features-guarantee-text {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.5px;
+    color: #424153;
+  }
+  
+  .c-gem-test__features-payments {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Center on mobile */
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 8px;
+    min-height: 24px; /* Minimum height */
+  }
+  @media (min-width: 600px) {
+      .c-gem-test__features-payments {
+          justify-content: flex-end; /* Align right on desktop */
+      }
+  }
+  
+  .c-gem-test__features-payment-icon img {
+    display: block; /* Remove extra space below image */
+    width: auto; /* Let height control size */
+    height: 24px;
+    max-width: 39.2px; /* Limit width */
+    object-fit: contain;
+  }
+  
+  .c-gem-test__features-payment-icon .placeholder-svg {
+    width: 39.2px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border: 1px solid #e5e5e5;
+  }
+  .c-gem-test__features-payment-icon .placeholder-svg svg {
+      width: 20px;
+      height: 15px;
+  }
+  
+  
+  /* --- Block Type: content_with_stats --- */
+  .c-gem-test__stats {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 30px;
+    width: 100%;
+    background: #F8F8F8; /* Default background */
+  }
+  @media (min-width: 990px) {
+      .c-gem-test__stats {
+          flex-direction: row;
+          padding-top: 80px;
+          padding-bottom: 80px;
+      }
+  }
+  
+  .c-gem-test__stats-content-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 48px;
+    width: 100%; /* Full width on mobile */
+    max-width: 570px; /* Max width */
+    padding-right: 0; /* Remove padding for mobile */
+  }
+  @media (min-width: 990px) {
+      .c-gem-test__stats-content-column {
+          width: 50%; /* Adjust width distribution */
+          padding-right: 32px; /* Right padding on desktop */
+      }
+  }
+  
+  .c-gem-test__stats-heading-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+  /* Center text on mobile */
+  @media (max-width: 989px) {
+      .c-gem-test__stats-heading-group {
+          align-items: center;
+          text-align: center;
+      }
+  }
+  
+  .c-gem-test__stats-heading {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2; /* 120% */
+    letter-spacing: 0.25px;
+    color: #161723;
+    margin: 0;
+    width: 100%;
+    max-width: 538px; /* Ensure heading doesn't get too wide */
+  }
+  
+  .c-gem-test__stats-description {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.5px;
+    color: #424153;
+    margin: 0;
+    width: 100%;
+    max-width: 538px;
+  }
+  /* Allow richtext styles */
+  .c-gem-test__stats-description p {
+      margin-bottom: 1em;
+  }
+  .c-gem-test__stats-description p:last-child {
+      margin-bottom: 0;
+  }
+  
+  
+  .c-gem-test__stats-keypoints-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%;
+  }
+  /* Center text on mobile */
+  @media (max-width: 989px) {
+      .c-gem-test__stats-keypoints-group {
+          align-items: center;
+          text-align: center;
+      }
+  }
+  
+  .c-gem-test__stats-keypoints-title {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.5px;
+    color: #161723;
+    margin: 0 0 8px 0; /* Added bottom margin */
+    width: 100%;
+    max-width: 538px;
+  }
+  
+  .c-gem-test__stats-keypoints-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px; /* Gap between points and dividers */
+    width: 100%;
+    max-width: 538px;
+  }
+  
+  .c-gem-test__keypoint-item {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center; /* Center on mobile */
+    text-align: center; /* Center text on mobile */
+    padding: 0;
+    gap: 10px; /* Gap when stacked */
+    width: 100%;
+    min-height: 50px;
+  }
+  @media (min-width: 600px) { /* Row layout on larger screens */
+      .c-gem-test__keypoint-item {
+          flex-direction: row;
+          align-items: center; /* Vertically align items in row */
+          text-align: left; /* Align text left */
+          gap: 48px;
+      }
+  }
+  
+  
+  .c-gem-test__keypoint-stat {
+    min-width: 70px; /* Ensure alignment */
+    text-align: center; /* Center stat text */
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: 1.2; /* Adjusted line height */
+    letter-spacing: 0.25px;
+    color: #EE6F4B;
+    flex-shrink: 0;
+  }
+  @media (min-width: 600px) {
+      .c-gem-test__keypoint-stat {
+          text-align: left; /* Align left on desktop */
+          line-height: 1.5; /* Match original design height (50px) */
+          height: 50px; /* Explicit height for alignment */
+      }
+  }
+  
+  .c-gem-test__keypoint-text {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5; /* 150% or 24px */
+    letter-spacing: 0.5px;
+    color: #424153;
+    flex-grow: 1;
+    margin: 0;
+    width: 100%; /* Take full width */
+  }
+  @media (min-width: 600px) {
+      .c-gem-test__keypoint-text {
+          width: auto; /* Allow flex grow */
+      }
+  }
+  
+  .c-gem-test__keypoint-divider {
+    width: 100%;
+    height: 1px;
+    border: none;
+    border-top: 1px solid #E3E3E8;
+    margin: 0;
+  }
+  
+  .c-gem-test__stats-button {
+    width: 100%; /* Button takes width of its container */
+    max-width: 538px;
+  }
+  /* Center button on mobile */
+  @media (max-width: 989px) {
+      .c-gem-test__stats-button-wrapper {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+      }
+  }
+  
+  
+  .c-gem-test__stats-image-column {
+    width: 100%; /* Full width on mobile */
+    max-width: 570px; /* Max width */
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide image overflow */
+  }
+  @media (min-width: 990px) {
+      .c-gem-test__stats-image-column {
+          width: 50%; /* Adjust width distribution */
+          height: 570px; /* Fixed height on desktop */
+      }
+  }
+  
+  .c-gem-test__stats-image-column img,
+  .c-gem-test__stats-image-column video,
+  .c-gem-test__stats-image-column iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+  .c-gem-test__stats-image-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+  }
+  .c-gem-test__stats-image-placeholder svg {
+      width: 50%;
+      height: 50%;
+  }
+  
+  
+  /* --- Block Type: alternating_media_rows --- */
+  .c-gem-test__alternating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px; /* Gap between rows */
+    width: 100%;
+  }
+  
+  @media (min-width: 750px) {
+    .c-gem-test__alternating {
+      gap: 80px;
+    }
+  }
+  
+  .c-gem-test__alternating-row {
+    display: flex;
+    flex-direction: column; /* Stack on mobile */
+    align-items: center;
+    gap: 30px;
+    width: 100%; /* Center content within page-width */
+  }
+  
+  /* Row 1: Image Left, Text Right (Desktop) */
+  /* Row 2: Text Left, Image Right (Desktop) */
+  @media (min-width: 990px) {
+    .c-gem-test__alternating-row {
+      flex-direction: row;
+    }
+    .c-gem-test__alternating-row--reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  .c-gem-test__alternating-media-wrapper {
+    width: 100%; /* Full width on mobile */
+    max-width: 570px; /* Max width */
+    height: auto;
+    aspect-ratio: 570 / 480; /* Maintain aspect ratio */
+    border-radius: 10px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Hide media overflow */
+  }
+  @media (min-width: 990px) {
+      .c-gem-test__alternating-media-wrapper {
+          width: 50%; /* Half width on desktop */
+          height: 480px; /* Fixed height */
+      }
+  }
+  
+  .c-gem-test__alternating-media-wrapper img,
+  .c-gem-test__alternating-media-wrapper video,
+  .c-gem-test__alternating-media-wrapper iframe,
+  .c-gem-test__alternating-media-wrapper .shopify-video { /* Class added by video tag */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
+  .c-gem-test__alternating-media-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+  }
+  .c-gem-test__alternating-media-placeholder svg {
+      width: 50%;
+      height: 50%;
+  }
+  
+  .c-gem-test__alternating-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    width: 100%; /* Full width on mobile */
+    max-width: 570px; /* Max width */
+    padding-left: 0;
+    padding-right: 0;
+  }
+  @media (min-width: 990px) {
+      .c-gem-test__alternating-text-wrapper {
+          width: 50%; /* Half width on desktop */
+      }
+      /* Add padding based on row order */
+      .c-gem-test__alternating-row:not(.c-gem-test__alternating-row--reverse) .c-gem-test__alternating-text-wrapper {
+          padding-left: 32px;
+      }
+       .c-gem-test__alternating-row--reverse .c-gem-test__alternating-text-wrapper {
+          padding-right: 32px;
+      }
+  }
+  /* Center text on mobile */
+  @media (max-width: 989px) {
+      .c-gem-test__alternating-text-wrapper {
+          align-items: center;
+          text-align: center;
+      }
+  }
+  
+  
+  .c-gem-test__alternating-heading {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.2; /* 120% */
+    letter-spacing: 0.25px;
+    color: #161723;
+    margin: 0;
+    width: 100%;
+    max-width: 538px; /* Limit width */
+  }
+  
+  .c-gem-test__alternating-description {
+    font-family: 'Inter Tight', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.5px;
+    color: #424153;
+    margin: 0;
+    width: 100%;
+    max-width: 538px; /* Limit width */
+  }
+  /* Allow richtext styles */
+  .c-gem-test__alternating-description p {
+      margin-bottom: 1em;
+  }
+  .c-gem-test__alternating-description p:last-child {
+      margin-bottom: 0;
+  }
+  
+  /* Helper class for empty content */
+  .c-gem-test--hidden {
+      display: none;
+  }
